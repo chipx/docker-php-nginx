@@ -1,7 +1,7 @@
 # Docker PHP-FPM 8.1 & Nginx 1.22 on Alpine Linux
 Example PHP-FPM 8.1 & Nginx 1.22 container image for Docker, built on [Alpine Linux](https://www.alpinelinux.org/).
 
-Repository: https://github.com/TrafeX/docker-php-nginx
+Repository: https://github.com/chipx/docker-php-nginx (forked from https://github.com/TrafeX/docker-php-nginx)
 
 
 * Built on the lightweight and secure Alpine Linux distribution
@@ -19,10 +19,6 @@ Repository: https://github.com/TrafeX/docker-php-nginx
 ![php 8.1](https://img.shields.io/badge/php-8.1-brightgreen.svg)
 ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-## [![Trafex Consultancy](https://timdepater.com/logo/mini-logo.png)](https://timdepater.com?mtm_campaign=github)
-I can help you with [Containerization, Kubernetes, Monitoring, Infrastructure as Code and other DevOps challenges](https://timdepater.com/?mtm_campaign=github).
-
-
 ## Goal of this project
 The goal of this container image is to provide an example for running Nginx and PHP-FPM in a container which follows
 the best practices and is easy to understand and modify to your needs.
@@ -38,12 +34,6 @@ See the PHP info on http://localhost, or the static html page on http://localhos
 Or mount your own code to be served by PHP-FPM & Nginx
 
     docker run -p 80:8080 -v ~/my-codebase:/var/www/html trafex/php-nginx
-
-### Docker Hub repository name change
-Since we switched to PHP8 the repository name [trafex/alpine-nginx-php7](https://hub.docker.com/r/trafex/alpine-nginx-php7) didn't make sense anymore.
-Because you can't change the name of the repository on Docker Hub I created a new one.
-
-From now on this image can be pulled from Docker Hub under the name [trafex/php-nginx](https://hub.docker.com/r/trafex/php-nginx).
 
 ## Configuration
 In [config/](config/) you'll find the default configuration files for Nginx, PHP and PHP-FPM.
