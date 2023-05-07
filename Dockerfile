@@ -14,7 +14,7 @@ RUN apk add --no-cache \
   php81-curl \
   php81-dom \
   php81-fpm \
-  php81-gd \
+  php81-gd \ 
   php81-intl \
   php81-mbstring \
   php81-mysqli \
@@ -24,7 +24,12 @@ RUN apk add --no-cache \
   php81-session \
   php81-xml \
   php81-xmlreader \
+  php81-pdo php81-pdo_mysql php81-tokenizer php81-simplexml \
+  php81-fileinfo php81-iconv php81-mbstring php81-intl \
+  php81-redis php81-posix \
   supervisor
+
+# php81-pecl-imagick 
 
 # Configure nginx - http
 COPY config/nginx/nginx.conf /etc/nginx/nginx.conf
